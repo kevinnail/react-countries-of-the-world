@@ -7,10 +7,13 @@ export default function Main() {
   const { countries, error } = useCountries();
 
   return (
-    <div className="main">
-      {countries.map((country) => (
-        <Countries key={country.id} {...country} />
-      ))}
+    <div>
+      <p className="error">{error}</p>
+      <section className="main">
+        {countries.map((country) => (
+          <Countries key={country.id} {...country} />
+        ))}
+      </section>
     </div>
   );
 }

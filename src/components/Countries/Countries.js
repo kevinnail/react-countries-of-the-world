@@ -3,7 +3,6 @@ import './Countries.css';
 
 export default function Countries({ name, iso2, local_name }) {
   const countryCode = iso2.toLowerCase();
-  console.log('local_name', local_name);
 
   return (
     <div className="countries">
