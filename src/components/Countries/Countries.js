@@ -1,29 +1,20 @@
 import React from 'react';
 import './Countries.css';
 
-export default function Countries({ name, iso2 }) {
+export default function Countries({ name, iso2, local_name }) {
   const countryCode = iso2.toLowerCase();
+  console.log('local_name', local_name);
 
   return (
     <div className="countries">
       <h3>{name}</h3>
+      <h4>{local_name}</h4>
       <img
         src={`https://flagcdn.com/224x168/${countryCode}.png`}
         width="224"
         height="168"
-        alt="South Africa"
+        alt={`"${name}"`}
       />
     </div>
   );
 }
-
-// export default function CountryCard(country) {
-//   const fixCase = country.iso2.toLowerCase();
-//   return (
-//     <div className="country-card">
-//       <h2>{country.name}</h2>
-//       <h4>{country.local_name}</h4>
-//       <img src={`https://flagcdn.com/w320/${fixCase}.png`} />
-//     </div>
-//   );
-// }
