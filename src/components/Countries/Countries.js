@@ -1,6 +1,7 @@
 import React from 'react';
 import './Countries.css';
-export default function Countries() {
+
+export default function Countries({ name, setName }) {
   return (
     <div className="countries">
       <h3>Bonaire, Sint Eustatius and Saba</h3>

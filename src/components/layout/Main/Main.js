@@ -1,12 +1,15 @@
 import React from 'react';
 import './Main.css';
-import Countries from '../../Countries/Countries';
+import useCountries from '../../../hooks/useCountries.js';
+import Countries from '../../Countries/Countries.js';
+
 export default function Main() {
+  const countries = useCountries();
   return (
     <div className="main">
-      <h1>Flags That Are Awesome Sauce</h1>
-
-      <Countries />
+      {countries.map((country) => (
+        <Countries key={country.id} {...country} />
+      ))}
     </div>
   );
 }
