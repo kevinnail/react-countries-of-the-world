@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.css';
-// import { useCountries } from '../../../hooks/useCountries.js';
 import useCountries from '../../../hooks/useCountries.js';
 import Countries from '../../Countries/Countries.js';
 
 export default function Main() {
-  const { countries } = useCountries();
-  // console.log('countries', countries);
+  const { countries, error } = useCountries();
+  const [name, setName] = useState('all');
 
   return (
     <div className="main">
