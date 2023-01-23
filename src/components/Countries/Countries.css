@@ -1,0 +1,15 @@
+.countries {
+  font-size: 1.17em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  height: 300px;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  border: 2px solid black;
+  background-color: rgb(34, 0, 255);
+  color: white;
+  padding-bottom: 40px;
+}
